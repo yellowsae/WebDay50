@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    /*  分盒子的宽高*/
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Muli", sans-serif;
+    display: flex;
+    /*  文本垂直居中*/
+    align-items: center;
+    /* 响应式布局，居中平分*/
+    justify-content: center;
+    height: 100vh;
+    /* 清除浮动*/
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    /* 内容宽度*/
+    width: 90vw;
+}
+
+.panel {
+    /* background-size 设置背景图片大小。图片可以保有其原有的尺寸，
+    或者拉伸到新的尺寸，或者在保持其原有比例的同时缩放到元素的可用空间的尺寸。*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    /* 鼠标手势*/
+    cursor: pointer;
+    /* flex 平分布局*/
+    flex: 0.5;
+    /* 距离*/
+    margin: 10px;
+    position: relative;
+    /* 过度动画  移动效果*/
+    transition: all 700ms ease-in;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 4px;
+    margin: 0;
+    /* 所有的透明度*/
+    opacity: 0;
+}
+.panel.active {
+    /* active 能分到的布局*/
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    /* 执行动画*/
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+/* 媒体查询*/
+@media (max-width: 480px) {
+    .container {
+        width: 1100vh;
+    }
+    .panel:nth-child(4),
+    .panel:nth-child(5) {
+        display: none;
+    }
+}
