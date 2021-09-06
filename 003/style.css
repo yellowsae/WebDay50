@@ -47,7 +47,7 @@ body {
     position: relative;
     transition: transform 0.5s linear;
 }
-.circle.show-nav  .circle{
+.container.show-nav  .circle{
     /* 变形*/
     transform: rotate(-70deg)
 }
@@ -83,7 +83,7 @@ body {
 }
 
 
-.circle.show-nav  + nav li{
+.container.show-nav  + nav li{
     transform: translateX(0);
     /* 动画时间*/
     transition-delay: 0.3s;
