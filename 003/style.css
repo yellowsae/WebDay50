@@ -1,0 +1,150 @@
+/* 导入字体*/
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+    /* 平分盒子*/
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    /* 黑色*/
+    background-color: #333;
+    color: #222;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+/* 用作元素变形*/
+.container {
+    background-color: #fafafa;
+    /* transform-origin CSS属性让你更改一个元素变形的原点。*/
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.container.show-nav {
+    /* 变形*/
+    transform: rotate(-20deg);
+}
+
+.circle-container {
+    /* position: fixed 固定定位 */
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle {
+    background-color: #ff7979;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    /* 相对定位*/
+    position: relative;
+    transition: transform 0.5s linear;
+}
+.circle.show-nav  .circle{
+    /* 变形*/
+    transform: rotate(-70deg)
+}
+
+.circle button {
+    /* 鼠标手势*/
+    cursor: pointer;
+    /* 绝对定位*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100px;
+    /* 背景透明*/
+    background: transparent;
+    /* 无边框*/
+    border: 0;
+    font-size: 26px;
+    color: #fff;
+}
+
+.circle button:focus {
+    outline: none;
+}
+.circle button#open {
+    left: 60%;
+}
+
+.circle button#close {
+    top: 60%;
+    /* 变形*/
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+
+.circle.show-nav  + nav li{
+    transform: translateX(0);
+    /* 动画时间*/
+    transition-delay: 0.3s;
+}
+
+nav {
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+nav ul li {
+    /* 字母大写*/
+    text-transform: uppercase;
+    color: #fff;
+    margin: 40px 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;
+    -webkit-transition: transform 0.4s ease-in;
+}
+
+nav ul li i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+nav ul li + li {
+/*     li 的兄弟元素 */
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+nav ul li + li + li {
+    margin-left: 30px;
+    transform: translateX(-200%);
+}
+
+.content img {
+    max-width: 100%;
+}
+.content {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.content h1 {
+    margin: 0;
+}
+
+.content small {
+    color: #555;
+    /* 斜体*/
+    font-style: italic;
+}
+
+.content p {
+    color: #333;
+    line-height: 1.5;
+}
