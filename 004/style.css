@@ -1,0 +1,73 @@
+/* 导入字体*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* CSS linear-gradient() 函数用于创建一个表示两种或多种颜色线性渐变的图片。
+    其结果属于<gradient>数据类型，是一种特别的<image>数据类型。*/
+
+    /* 背景渐变*/
+    background-image: linear-gradient(90deg, #7d5fff, #7158e2);
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    /* align-items属性将所有直接子节点上的align-self值设置为一个组。
+    align-self属性设置项目在其包含块中在交叉轴方向上的对齐方式。*/
+    align-items: center;
+    /* justify-content 属性定义了浏览器之间，如何分配顺着弹性容器主轴(或者网格行轴)
+    的元素之间及其周围的空间。    justify-content: center; 居中排列 */
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.search {
+    position: relative;
+    height: 50px;
+}
+
+.search .input {
+    background-color: #fff;
+    border: 0;
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    /* 动画 ， 出现 搜索框*/
+    transition: width 0.3s ease;
+}
+
+.btn {
+    /* 将按钮和搜索框重叠*/
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    /* 添加动画*/
+    transition: transform 0.3s ease;
+}
+
+.btn:focus,
+.input:focus {
+    /* :focus表示获得焦点的元素（如表单输入）。
+    当用户点击或触摸元素或通过键盘的 “tab” 键选择它时会被触发。*/
+    outline: none;
+}
+
+.search.active .input {
+    width: 200px;
+}
+
+.search.active .btn {
+    transform: translateX(198px);
+}
+
+
