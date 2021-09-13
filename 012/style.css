@@ -40,8 +40,7 @@ h1 {
 }
 
 
-/* 设置对话动画  */
-
+/* 设置对话动画 ， 的语言表示框   */
 .faq.active::before,
 .faq.active::after {
     content: "\f075";
@@ -57,6 +56,7 @@ h1 {
 }
 
 .faq.active::before {
+    /* 颜色和偏移 */
     color: #3498db;
     top: -10px;
     left: -30px;
@@ -68,12 +68,15 @@ h1 {
     margin: 0 35px 0 0;
 }
 
+
+/* /* 文本内容 */
 .faq-text {
     display: none;
     /* 上边距  */
     margin: 30px 0 0;
 }
 
+/* 文本内容 */
 .faq.active .faq-text {
     /* p 标签 转为 块级   */
     display: block;
