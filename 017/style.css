@@ -98,6 +98,7 @@ main {
     color: red;
 }
 
+/* 电影简介 */
 .overview {
     background-color: #fff;
     padding: 2rem;
@@ -106,10 +107,11 @@ main {
     bottom: 0;
     right: 0;
     max-height: 100%;
+    /* 设置动画 */
     transform: translateY(101%);
     transition: transform 0.3s ease-in;
 }
-
+/* 触发样式  */
 .movie:hover .overview {
     transform: translateY(0);
 }
