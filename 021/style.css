@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /*  flex 布局  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: steelblue;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.empty {
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    border: 3px solid black;
+    background: white;
+}
+
+.fill {
+    /*  随机生成一张图片  */
+    background-image: url('https://source.unsplash.com/random/150x150');
+    height: 145px;
+    width: 145px;
+    cursor: pointer;
+}
+
+.hold {
+    border: 5px solid #ccc;
+}
+
+.hovered {
+    background-color: #333;
+    border-color: #fff;
+    /*  边框样式  */
+    border-style: dashed;
+}
+
+@media (max-width: 800px) {
+    body {
+        /*  column 向下居中对齐  */
+        flex-direction: column;
+    }
+}
