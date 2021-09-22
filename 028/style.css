@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+    box-sizing:border-box;
+}
+
+body {
+    background-color: rebeccapurple;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.btn {
+    background-color: #fff;
+    color: rebeccapurple;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:active {
+    /* 点击变小 再变大  */
+    /* 点击样式 */
+    transform: scale(0.98);
+}
+
+
+#toasts {
+    /* 固定定位*/
+    position: fixed;
+    /* 左边距离 */
+    right: 10px;
+    /* 下边距离 */
+    bottom: 10px;
+    display: flex;
+    /* 向下平铺*/
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.toast {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+}
+
+.toast.info {
+    color: rebeccapurple;
+}
+.toast.success {
+    color: green;
+}
+
+.toast.error {
+    color: red;
+}
+
+
