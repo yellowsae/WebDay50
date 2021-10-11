@@ -72,7 +72,7 @@ nav li p {
     font-size: 12px;
     /* 设置字体 */
     margin: 2px 0;
-     text-transform: uppercase;
+     text-transform: capitalize;
 }
 
 
