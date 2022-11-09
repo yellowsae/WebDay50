@@ -1,0 +1,23 @@
+{
+  "name": "webday50",
+  "version": "1.0.0",
+  "description": "一天一个小项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yellowsae/WebDay50.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yellowsae/WebDay50/issues"
+  },
+  "homepage": "https://github.com/yellowsae/WebDay50#readme",
+  "dependencies": {
+    "serve": "^14.1.1"
+  }
+}
